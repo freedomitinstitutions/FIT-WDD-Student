@@ -1,4 +1,4 @@
-const API_URL = "PASTE_YOUR_GOOGLE_SCRIPT_URL_HERE";
+const API_URL = "https://script.google.com/macros/s/AKfycbw2USc7LvXEURCo_UWlq_2oAlyWnmOETjAVrKCsDIUqe5quVLmc5otB48P1cMd35Qnocw/exec";
 
 function showRegister() {
   document.getElementById("registerBox").style.display = "block";
@@ -41,4 +41,5 @@ function login() {
       }
     }
   });
+
 }
