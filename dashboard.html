@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+</head>
+<body>
+
+<h2>Student Dashboard</h2>
+<div id="profile"></div>
+
+<script>
+let student = JSON.parse(localStorage.getItem("student"));
+
+document.getElementById("profile").innerHTML = `
+  <p>Name: ${student[0]}</p>
+  <p>Email: ${student[1]}</p>
+  <p>Mobile: ${student[2]}</p>
+  <p>Total Point: ${student[13]}</p>
+`;
+</script>
+
+</body>
+</html>
