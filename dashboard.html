@@ -1,23 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Dashboard</title>
-</head>
-<body>
-
-<h2>Student Dashboard</h2>
-<div id="profile"></div>
+<div class="dashboard">
+  <h2>Student Dashboard</h2>
+  <div id="profile"></div>
+  <button onclick="logout()">Logout</button>
+</div>
 
 <script>
 let student = JSON.parse(localStorage.getItem("student"));
 
 document.getElementById("profile").innerHTML = `
-  <p>Name: ${student[0]}</p>
-  <p>Email: ${student[1]}</p>
-  <p>Mobile: ${student[2]}</p>
-  <p>Total Point: ${student[13]}</p>
+  <p>Name: ${student[1]}</p>
+  <p>Email: ${student[2]}</p>
+  <p>Mobile: ${student[3]}</p>
+  <p>Status: ${student[15]}</p>
+  <p>Total Point: ${student[14]}</p>
 `;
+function logout(){
+  localStorage.clear();
+  window.location="index.html";
+}
 </script>
-
-</body>
-</html>
